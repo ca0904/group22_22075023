@@ -62,9 +62,7 @@ class RegistrationView(View):
         if form.is_valid():
             messages.success(request, "Congratulations! Registration Successful!")
             form.save()
-            form = RegistrationForm()
-        # return render(request, 'account/register.html', {'form': form})
-        return redirect('/accounts/login')
+        return render(request, 'account/register.html', {'form': form})
         
 
 @login_required

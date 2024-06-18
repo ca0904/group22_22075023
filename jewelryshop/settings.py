@@ -73,12 +73,6 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
-        # "ENGINE": "django.db.backends.mysql",
-        # "NAME": "ecom",
-        # "USER": "chetan",
-        # "PASSWORD": "10092004",
-        # "HOST": "localhost",
-        # "PORT": "3306"
     }
 }
 
@@ -120,8 +114,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-# STATIC_ROOT = os.path.join(BASE_DIR, 'static') # Automatically Created on Production
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'jewelryshop/static')]
+STATIC_ROOT = os.path.join(BASE_DIR, 'static') # Automatically Created on Production
 
 # Settings for Media
 MEDIA_URL = '/media/'

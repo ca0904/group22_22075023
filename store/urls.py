@@ -23,7 +23,7 @@ urlpatterns = [
     path('categories/', views.all_categories, name="all-categories"),
     path('<slug:slug>/', views.category_products, name="category-products"),
 
-    # path('shop/', views.shop, name="shop"),
+    path('shop/', views.shop, name="shop"),
 
     # URL for Authentication
     path('accounts/register/', views.RegistrationView.as_view(), name="register"),
@@ -41,7 +41,7 @@ urlpatterns = [
     path('accounts/password-reset-confirm/<uidb64>/<token>/', auth_views.PasswordResetConfirmView.as_view(template_name='account/password_reset_confirm.html', form_class=SetPasswordForm, success_url='/accounts/password-reset-complete/'), name="password_reset_confirm"), # Passing Success URL to Override default URL
     path('accounts/password-reset-complete/', auth_views.PasswordResetCompleteView.as_view(template_name='account/password_reset_complete.html'), name="password_reset_complete"),
 
-    # path('product/test/', views.test, name="test"),
+    path('product/test/', views.test, name="test"),
 
     
 ]
